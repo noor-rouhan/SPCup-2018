@@ -1,0 +1,18 @@
+
+
+% corner1 = i(1:512,1:512,2);
+% corner2 = i(2448-512:2448,size(i,2)-512:size(i,2),2);
+sad = transpose( dir( '*.jpg' ) );
+i = 0;
+for file = sad
+       i = i +1
+       % disp( file.name 
+       FileName = (file.name);
+       [ Fft,Ft,m] = demosaic_fourier( imread(FileName) );
+       htc_max_demosaic(i) = [m];
+       m
+end
+plot(m)
+
+
+
